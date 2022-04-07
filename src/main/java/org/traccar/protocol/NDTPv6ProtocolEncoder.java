@@ -1,5 +1,5 @@
 /*
- * 2020 - NDTP v6 Protocol Encoder
+ * 2022 - NDTP v6 Protocol Encoder for Granit.
  */
 package org.traccar.protocol;
 
