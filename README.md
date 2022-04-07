@@ -2,7 +2,11 @@
 
 ## Overview
 
-Traccar is an open source GPS tracking system version 4.10. <b>This NOT ORGINAL repository!</b> Add protocol NDTP v6, and other server modifications.
+Traccar is an open source GPS tracking system version 4.10. <b>This NOT ORGINAL repository!</b>
+
+## MOD'S
+
+ -  Add protocol NDTP v6.
 
 ## Build
 
