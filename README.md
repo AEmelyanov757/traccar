@@ -1,8 +1,10 @@
-# [Traccar mod](https://www.traccar.org)
+# [Traccar mod]
 
 ## Overview
 
-Traccar is an open source GPS tracking system version 4.10. <b>This NOT ORGINAL repository!</b>
+Traccar is an open source GPS tracking system version 4.10. <br/>
+<b>This NOT ORGINAL repository!</b><br/>
+Серверная часть проекта Traccar, основанная на версии 4.10 с модификацией.
 
 ## MOD'S
 
@@ -10,7 +12,16 @@ Traccar is an open source GPS tracking system version 4.10. <b>This NOT ORGINAL 
 
 ## Build
 
-Please read [build from source documentation](https://www.traccar.org/build/) on the official website.
+Please read [build from source documentation](https://www.traccar.org/build/) on the official website.<br/>
+<br/>
+1. Установить Java SE Development Kit версии страше 8. <br/>
+2. Установить IDE (в моем случае VSCode). <br/>
+3. В VSCode: установить расширение "Language support for Java ™ for Visual Studio Code". <br/>
+4. В VSCode: установить расширение "Extension Pack for Java". <br/>
+5. В VSCode: установить расширение "Maven for Java". <br/>
+После внесения измений в проекте, использовать командную строку. Команда: <br/>
+$ ./gradlew assemble
+<br/>
 
 ## License
 
