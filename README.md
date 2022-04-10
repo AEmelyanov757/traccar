@@ -19,7 +19,7 @@ Please read [build from source documentation](https://www.traccar.org/build/) on
 3. В VSCode: установить расширение "Language support for Java ™ for Visual Studio Code". <br/>
 4. В VSCode: установить расширение "Extension Pack for Java". <br/>
 5. В VSCode: установить расширение "Maven for Java". <br/>
-После внесения измений в проекте, использовать командную строку. Команда: <br/>
+После внесения измений в проекте, использовать команду: <br/>
 $ ./gradlew assemble
 <br/>
 
