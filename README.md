@@ -32,7 +32,7 @@ $ ./gradlew assemble
 7. Возвращаемся в каталог /opt/traccar. Создаем каталог "mkdir logs", и каталог "mkdir data".<br/>
 8. Переходим в каталог "cd /etc/systemd/system", создаем файл "traccar.service" редактируем "nano traccar.service", вводим в файле: <br/>
 
-    
+'''    
     [Unit]
     Description=traccar
     After=network.target
@@ -50,7 +50,7 @@ $ ./gradlew assemble
     [Install]
     WantedBy=multi-user.target
     
-
+'''
 <br/>
 9. Сохраняем файл, и перезапускаем daemon командой "systemctl daemon-reload".<br/>
 10. Активируем daemon командой "systemctl enable traccar.service".<br/>
