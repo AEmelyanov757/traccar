@@ -23,7 +23,7 @@ $ ./gradlew assemble
 Необходим дистрибутив 64-bit ОС Debian или Ubuntu.<br/>
 1. Все ARM машины имеют ограниченный объем ОЗУ, поэтому необходимы меры по экономии памяти. Избавляемся от "визуального режима":<br/>
 sudo systemctl set-default multi-user.target<br/>
-2. Создаем каталог "mkdir /opt/traccar" входим в каталог "cd /opt/traccar", копируем из каталога собранного проекта ../traccar/target/ содержимое:<br/>
+2. Создаем каталог "mkdir /opt/traccar" входим в каталог "cd /opt/traccar", копируем из каталога собранного проекта .../traccar/target/ содержимое:<br/>
 каталог lib с содержимым, и файл tracker-server.jar <br/>
 3. Создаем каталог "mkdir web" входим в каталог "cd web", копируем из каталога собранного проекта ../traccar/traccar-web/web папку с содержимым.<br/>
 4. Возвращаемся в каталог /opt/traccar. Создаем каталог "mkdir conf", копируем из каталога собранного проекта ../traccar/setup файлы default.xml и traccar.xml.<br/>
