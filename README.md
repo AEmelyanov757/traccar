@@ -31,25 +31,24 @@ $ ./gradlew assemble
 6. Возвращаемся в каталог /opt/traccar. Создаем каталог "mkdir templates", копируем из каталога собранного проекта "<рабочий_каталог>/traccar/templates" содержимое.<br/>
 7. Возвращаемся в каталог /opt/traccar. Создаем каталог "mkdir logs", и каталог "mkdir data".<br/>
 8. Переходим в каталог "cd /etc/systemd/system", создаем файл "traccar.service" редактируем "nano traccar.service", вводим в файле: <br/>
-<br/>
-<code>
-[Unit]<br/>
-Description=traccar<br/>
-After=network.target<br/>
-Conflicts=shutdown.target<br/>
-<br/>
-[Service]<br/>
-WorkingDirectory=/opt/traccar<br/>
-SyslogIdentifier=traccar<br/>
-ExecStart=/bin/sh -c "exec java -jar -Xms512M -Xmx1024M tracker-server.jar conf/traccar.xml"<br/>
-Type=simple<br/>
-Restart=on-failure<br/>
-RestartSec=10<br/>
-SuccessExitStatus=143<br/>
-<br/>
-[Install]<br/>
-WantedBy=multi-user.target<br/>
-</code>
+'''
+[Unit]
+Description=traccar
+After=network.target
+Conflicts=shutdown.target
+
+[Service]
+WorkingDirectory=/opt/traccar
+SyslogIdentifier=traccar
+ExecStart=/bin/sh -c "exec java -jar -Xms512M -Xmx1024M tracker-server.jar conf/traccar.xml"
+Type=simple
+Restart=on-failure
+RestartSec=10
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
+'''
 <br/>
 9. Сохраняем файл, и перезапускаем daemon командой "systemctl daemon-reload".<br/>
 10. Активируем daemon командой "systemctl enable traccar.service".<br/>
