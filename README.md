@@ -33,6 +33,7 @@ $ ./gradlew assemble
 8. Переходим в каталог "cd /etc/systemd/system", создаем файл "traccar.service" редактируем "nano traccar.service", вводим в файле: <br/>
 
 '''    
+    
     [Unit]
     Description=traccar
     After=network.target
