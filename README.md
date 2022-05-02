@@ -32,23 +32,23 @@ $ ./gradlew assemble
 7. Возвращаемся в каталог /opt/traccar. Создаем каталог "mkdir logs", и каталог "mkdir data".<br/>
 8. Переходим в каталог "cd /etc/systemd/system", создаем файл "traccar.service" редактируем "nano traccar.service", вводим в файле: <br/>
 
-'''Shell
-[Unit]
-Description=traccar
-After=network.target
-Conflicts=shutdown.target
-
-[Service]
-WorkingDirectory=/opt/traccar
-SyslogIdentifier=traccar
-ExecStart=/bin/sh -c "exec java -jar -Xms512M -Xmx1024M tracker-server.jar conf/traccar.xml"
-Type=simple
-Restart=on-failure
-RestartSec=10
-SuccessExitStatus=143
-
-[Install]
-WantedBy=multi-user.target
+'''
+    [Unit]
+    Description=traccar
+    After=network.target
+    Conflicts=shutdown.target
+    
+    [Service]
+    WorkingDirectory=/opt/traccar
+    SyslogIdentifier=traccar
+    ExecStart=/bin/sh -c "exec java -jar -Xms512M -Xmx1024M tracker-server.jar conf/traccar.xml"
+    Type=simple
+    Restart=on-failure
+    RestartSec=10
+    SuccessExitStatus=143
+    
+    [Install]
+    WantedBy=multi-user.target
 '''
 <br/>
 9. Сохраняем файл, и перезапускаем daemon командой "systemctl daemon-reload".<br/>
