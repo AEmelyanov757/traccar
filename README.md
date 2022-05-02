@@ -22,13 +22,13 @@ $ ./gradlew assemble
 ## Install on ARM (Jetson Nano 2Gb, Raspbian Pi ...)
 Необходим дистрибутив 64-bit ОС Debian или Ubuntu.<br/>
 1. Все ARM машины имеют ограниченный объем ОЗУ, поэтому необходимы меры по экономии памяти. Избавляемся от "визуального режима":<br/>
-sudo systemctl set-default multi-user.target<br/>
-2. Создаем каталог "mkdir /opt/traccar" входим в каталог "cd /opt/traccar", копируем из каталога собранного проекта .../traccar/target/ содержимое:<br/>
-каталог lib с содержимым, и файл tracker-server.jar <br/>
-3. Создаем каталог "mkdir web" входим в каталог "cd web", копируем из каталога собранного проекта ../traccar/traccar-web/web папку с содержимым.<br/>
-4. Возвращаемся в каталог /opt/traccar. Создаем каталог "mkdir conf", копируем из каталога собранного проекта ../traccar/setup файлы default.xml и traccar.xml.<br/>
-5. Возвращаемся в каталог /opt/traccar. Создаем каталог "mkdir schema", копируем из каталога собранного проекта ../traccar/schema содержимое.<br/>
-6. Возвращаемся в каталог /opt/traccar. Создаем каталог "mkdir templates", копируем из каталога собранного проекта ../traccar/templates содержимое.<br/>
+"sudo systemctl set-default multi-user.target"<br/>
+2. Создаем каталог "mkdir /opt/traccar" входим в каталог "cd /opt/traccar", копируем из каталога собранного проекта "<рабочий_каталог>/traccar/target/" содержимое:<br/>
+каталог "lib" с содержимым, и файл "tracker-server.jar"<br/>
+3. Создаем каталог "mkdir web" входим в каталог "cd web", копируем из каталога собранного проекта "<рабочий_каталог>/traccar/traccar-web/web" папку с содержимым.<br/>
+4. Возвращаемся в каталог /opt/traccar. Создаем каталог "mkdir conf", копируем из каталога собранного проекта "<рабочий_каталог>/traccar/setup" файлы "default.xml" и "traccar.xml".<br/>
+5. Возвращаемся в каталог /opt/traccar. Создаем каталог "mkdir schema", копируем из каталога собранного проекта "<рабочий_каталог>/traccar/schema" содержимое.<br/>
+6. Возвращаемся в каталог /opt/traccar. Создаем каталог "mkdir templates", копируем из каталога собранного проекта "<рабочий_каталог>/traccar/templates" содержимое.<br/>
 7. Возвращаемся в каталог /opt/traccar. Создаем каталог "mkdir logs", и каталог "mkdir data".<br/>
 8. Переходим в каталог "cd /etc/systemd/system", создаем файл "traccar.service" редактируем "nano traccar.service", вводим в файле: <br/>
 [Unit]<br/>
@@ -51,7 +51,7 @@ WantedBy=multi-user.target<br/>
 9. Сохраняем файл, и перезапускаем daemon командой "systemctl daemon-reload".<br/>
 10. Активируем daemon командой "systemctl enable traccar.service".<br/>
 11. Запускаем daemon командой "systemctl start traccar.service".<br/>
-12. Смотрим состояние daemon командой "systemctl status traccar.service", ошибок не должно быть, иначе исправлем...<br/>
+12. Смотрим состояние daemon командой "systemctl status traccar.service", ошибок не должно быть, иначе исправлем их.<br/>
 По умолчанию traccar сервер использует порт 8082. В веб-браузере вводим:  http://<ip_адрес_сервера>:8082<br/> 
 
 ## License
