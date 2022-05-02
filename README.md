@@ -32,7 +32,8 @@ $ ./gradlew assemble
 7. Возвращаемся в каталог /opt/traccar. Создаем каталог "mkdir logs", и каталог "mkdir data".<br/>
 8. Переходим в каталог "cd /etc/systemd/system", создаем файл "traccar.service" редактируем "nano traccar.service", вводим в файле: <br/>
 
-'''
+'''    
+    
     [Unit]
     Description=traccar
     After=network.target
